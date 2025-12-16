@@ -1,12 +1,22 @@
 version: '3.8'
 services:
-  web-node:
+  # Dịch vụ cho ứng dụng Node.js
+  app-node:
     build: .
     ports:
       - "3000:3000"
+    depends_on:
+      - db-mongo
     environment:
-      - MONGO_URI=mongodb://db-mongo:27017/mydb
+      - MONGO_URI=mongodb://db-mongo:27017/my_database
+
+  # Dịch vụ cho Database MongoDB
   db-mongo:
     image: mongo:latest
     ports:
       - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
