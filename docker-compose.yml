@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web-node:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://db-mongo:27017/mydb
+  db-mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
