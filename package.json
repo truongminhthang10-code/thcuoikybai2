@@ -1,0 +1,25 @@
+{
+  "name": "project_2_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truongminhthang10-code/thcuoikybai2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truongminhthang10-code/thcuoikybai2/issues"
+  },
+  "homepage": "https://github.com/truongminhthang10-code/thcuoikybai2#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
+  }
+}
